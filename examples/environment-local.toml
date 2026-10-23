@@ -1,0 +1,8 @@
+# Optional local config. No services are discovered or started.
+[environment]
+timeout = 3.0
+endpoints = []
+# Explicitly opt in to a documented read-only health endpoint on your host:
+# endpoints = ["http://127.0.0.1:PORT/health"]
+# Replace PORT before use. Credentials, query strings, fragments and non-loopback
+# addresses are rejected. An HTTP success is NOT an inference-readiness proof.

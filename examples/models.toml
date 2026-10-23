@@ -1,0 +1,24 @@
+# Portable settings reference, not an automatically loaded configuration file.
+# Map these fields to CLI flags or Python keyword arguments. No credential values.
+[openai]
+endpoint = "http://127.0.0.1:8080/v1"
+model = "YOUR_MODEL_ID"
+key_env = "LOCAL_MODEL_API_KEY" # optional; omit for unauthenticated local servers
+max_tokens = 128
+timeout = 30
+
+[whisper]
+launcher = "/path/to/whisper"
+model_path = "/path/to/models/large-v3-turbo"
+audio = "/path/to/input.wav"
+output_dir = "/path/to/new-transcript"
+device = "cpu"
+timeout = 300
+
+[tts]
+launcher = "/path/to/omnivoice_speak.sh"
+model_path = "/path/to/OmniVoice-model"
+output_dir = "/path/to/new-speech"
+device = "cpu"
+timeout = 300
+# Supply text through --text-file (or the Python text keyword), not this file.

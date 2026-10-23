@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-workbench"
+version = "0.1.0"
+description = "Small, inspectable CLI adapters for an agent's local tools and models"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[project.urls]
+Repository = "https://github.com/diregoblin/agent-workbench"
+Issues = "https://github.com/diregoblin/agent-workbench/issues"
+
+[project.scripts]
+agent-workbench = "agent_workbench.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
